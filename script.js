@@ -1,4 +1,5 @@
 console.log("Program Started..")
+// Cloned successfully..
 //DATA TYPES IN JAVASCRIPT:
 //TWO TYPES: PRIMITIVE AND NON-PRIMITIVE
 
