@@ -2,3 +2,8 @@
     background-color: #000;
     color: white
 }
+
+.heightEl {
+    background-color: blue;
+    height: 300px;
+}
