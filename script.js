@@ -81,6 +81,8 @@
 //string.charAt(0) RETURNS CHARACTER AT THE SPECIFIED INDEX OUTPUT: H
 //string.charCodeAt() RETURNS CHARACTER CODE OF THE CHAR SPECIFIED IN THE ARGUMENT
 
+//JSON.stringify() to convert an object into a string
+
 //MATH OPERATORS IN JAVASCRIPT:::::::::::::
 // 1) ADDITION OPERATOR +
 // 2) SUBTRACTION OPERATOR -
@@ -170,7 +172,7 @@
 //     age: "20"
 // } THIS IS AN OBJECT
 
-//YOU CAN ACCESS THE VALUES INSIDE AN OBJECT USING DOTS [.] OR STRING [""] eg: obj["lastName"]
+// YOU CAN ACCESS THE VALUES INSIDE AN OBJECT USING DOTS [.] OR STRING [""] eg: obj["lastName"]
 // YOU CAN UPDATE/CHANGE THE VALUES INSIDE AN OBJECT LIKE THIS: obj.age = "21" INSIDE THE CONSOLE
 // BUT IT ONLY CHANGES INSIDE THE MEMORY OF YOUR CONSOLE
 // THE SAME WAY YOU CAN ALSO CREATE AN OBJECT INSIDE THE MEMORY OF CONSOLE
@@ -218,7 +220,7 @@
 // Array.indexOf("Apple") , RETURNS THE INDEX OF APPLE i.e. 0
 // Array.includes("Apple") , RETURNS true OR false IF THE ELEMENT EXISTS OR NOT
 // Array.sort() , THIS SORTS THE ARRAY ALPHABETICALLY OR NUMERICALLY [ABCD or 1234]
-
+// Array.from() , Creates an array from an array-like object.
 // Array.slice(2) , SLICES THE ELEMENTS FROM AN ARRAY FROM THE GIVEN INDEX eg: 2 ,
 // END VALUE IN slice IS OPTIONAL
 
@@ -600,6 +602,11 @@
 // IT FOLLOWS A FIFO PRINCIPLE
 // THE CALLBACKS ARE ONLY MOVED TO THE CALLSTACK WHEN IT IS EMPTY
 
+//? THERE ARE TWO TYPES OF CALLBACK QUEUE:
+//? 1) MICRO-TASK QUEUE [High Priority Queue]
+// IF SOME FUNCTION IS GIVEN FOR EXECUTION LIKE: Promise. THEN IT IS SENT TO MICRO TASK QUEUE
+//? 2) TASK QUEUE / CALLBACK QUEUE [Low Priority Queue]
+
 //* METHODS IN JS::::::
 // A METHOD EXAMPLE CAN BE THE INBUILT Math FUNCTION PROVIDED BY JS
 // Math HAS MANY METHODS like, (Math.floor(), Math.random, Math.sqrt() )
@@ -687,13 +694,13 @@
 
 //? reduce() :::::::::
 // reduce() REDUCES AN ARRAY TO A SINGLE VALUE i.e THE SUM OF THE ARRAY AND THE ARGS PASSED WITHIN IT
-// const arrOfNumbers = [0, 1, 2, 3, 4, 5, 6]
-// const newArr = arrOfNumbers.reduce((a, b) => {
-//   return a + b
-// })
+const arrOfNumbers = [0, 1, 2, 3, 4, 5, 6]
+const newArr = arrOfNumbers.reduce((a, b) => {
+  return a + b
+})
 
-// const arr= newArr;
-// console.log(arr)
+const arr = newArr
+console.log(arr)
 
 //* SOME AND EVERY ARRAY METHOD:::::
 //? some() :::::::
@@ -1304,9 +1311,8 @@
 
 // }
 
-
 //* What are Setters and Getters?
-// These are simple methods of classes which will get and set a value. 
+// These are simple methods of classes which will get and set a value.
 // But from the outside they look like simple methods. Let's take a look at the below example.
 
 // class User{
@@ -1326,5 +1332,13 @@
 // const kedar = new User("kedar")
 // kedar.setName = "John"
 // kedar.getName
+
+//* DATE METHODS:::::::::::
+// let date = new Date()
+// console.log(date.toDateString()) //? Wed May 15 2024
+// console.log(date.toLocaleString()) //? 5/15/2024, 5:52:06 PM
+// console.log(date.toLocaleDateString()) //? 5/15/2024
+// console.log(date.toLocaleTimeString()) //? 5:52:06 PM
+// console.log(date.toTimeString()) //? 17:52:06 GMT+0530 (India Standard Time)
 
 //* END OF JavaScript NOTES.
